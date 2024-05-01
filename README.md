@@ -8,9 +8,13 @@ This is an implementation of the algorithm proposed in [L2/24-122 Linkification 
 
 2. Run the following command to test the implementation:
 
-    ```sh
-    deno test
-    ```
+   ```sh
+   deno test
+   ```
+
+## Disclaimer
+
+This implementation is informal and is not guaranteed to work identically to the proposed algorithm. It is not intended to be used in production.
 
 ## References
 
