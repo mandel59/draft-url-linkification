@@ -40,7 +40,10 @@ Deno.test("getLastSafe, percent encoded", () => {
     assertEquals(getLastSafe("/wiki/%E5%85%83_(%E6%95%B0%E5%AD%A6) は大事"), "/wiki/%E5%85%83_(%E6%95%B0%E5%AD%A6)".length)
 });
 
-Deno.test("getLastSafe, percent encoded", () => {
+Deno.test("getLastSafe, greater than", () => {
     assertEquals(getLastSafe("/wiki/%E5%85%83_(%E6%95%B0%E5%AD%A6)>"), "/wiki/%E5%85%83_(%E6%95%B0%E5%AD%A6)".length)
 });
 
+Deno.test("getLastSafe, double quote", () => {
+    assertEquals(getLastSafe("/wiki/%E5%85%83_(%E6%95%B0%E5%AD%A6)\""), "/wiki/%E5%85%83_(%E6%95%B0%E5%AD%A6)".length)
+});
