@@ -1,4 +1,4 @@
-# url-linkification
+# draft-url-linkification
 
 This is an implementation of the algorithm proposed in [L2/24-122 Linkification of URLs](https://www.unicode.org/L2/L2024/24122-url-linkification.pdf).
 
