@@ -47,3 +47,15 @@ Deno.test("getLastSafe, greater than", () => {
 Deno.test("getLastSafe, double quote", () => {
     assertEquals(getLastSafe("/wiki/%E5%85%83_(%E6%95%B0%E5%AD%A6)\""), "/wiki/%E5%85%83_(%E6%95%B0%E5%AD%A6)".length)
 });
+
+Deno.test("getLastSafe, emoji", () => {
+    assertEquals(getLastSafe("/emoji?char=🐈"), "/emoji?char=🐈".length)
+})
+
+Deno.test("getLastSafe, emoji-period", () => {
+    assertEquals(getLastSafe("/emoji?char=🐈."), "/emoji?char=🐈".length)
+})
+
+Deno.test("getLastSafe, emoji-period-emoji", () => {
+    assertEquals(getLastSafe("/🐈.🐕"), "/🐈.🐕".length)
+})
